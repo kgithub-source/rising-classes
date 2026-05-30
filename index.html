@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISING CLASSES</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login.css">
+
+
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<header>
+
+<!-- <div class="logo-section">
+<div class="logo-circle">
+<i class="fa-solid fa-graduation-cap"></i>
+<img
+src="images\logo.jpeg"
+alt="Rising Classes Logo"
+class="logo-image">
+</div>
+<h2>RISING CLASSES</h2>
+</div> -->
+
+<div class="logo-section">
+    <div class="logo ">
+        <img
+        src="images/logo.jpeg"
+        alt="Rising Classes Logo"
+        class="logo-image">
+        <h6>RISING CLASSES</h6>
+    </div>
+    
+</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#teachers">Teachers</a></li>
+<li><a href="#students">Top Students</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</nav>
+
+<div class="auth-buttons">
+<button onclick="openLogin()">Login</button>
+<button  onclick="logout()">Log Out</button>
+<button onclick="openRegister()">Register</button>
+</div>
+
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>RISING CLASSES</h1>
+<p>
+Excellence in Education for aspiring minds in College Square, Aska
+</p>
+<button class="main-btn" onclick="scrollToEnroll()">
+Enroll Now
+</button>
+</div>
+</section>
+
+<section id="achievements">
+<h2 class="section-title">Achievements</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>500+</h3>
+<p>Successful Students</p>
+</div>
+
+<div class="card">
+<h3>98%</h3>
+<p>Success Rate</p>
+</div>
+
+<div class="card">
+<h3>50+</h3>
+<p>State Rank Holders</p>
+</div>
+
+</div>
+</section>
+
+<section id="teachers">
+
+<h2 class="section-title">
+Our Teachers
+</h2>
+
+<div
+class="card-container"
+id="teacherContainer">
+
+</div>
+
+</section>
+
+<section id="students">
+
+<h2 class="section-title">
+Top Students
+</h2>
+
+<div
+class="card-container"
+id="studentContainer">
+
+</div>
+
+</section>
+
+<section id="pricing">
+<h2 class="section-title">Pricing</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Basic</h3>
+<p>₹999/month</p>
+</div>
+
+<div class="card">
+<h3>Advanced</h3>
+<p>₹1999/month</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p>₹2999/month</p>
+</div>
+
+</div>
+</section>
+
+<section id="offers">
+<h2 class="section-title">Special Offers</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Scholarship Test</h3>
+<p>Up to 50% Discount</p>
+</div>
+
+<div class="card">
+<h3>Free Notes</h3>
+<p>For Early Admissions</p>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+
+<p class="about-text">
+RISING CLASSES provides quality education with experienced teachers,
+modern teaching techniques, and career-focused learning.
+</p>
+</section>
+
+<section id="enroll">
+<h2 class="section-title">Student Enrollment</h2>
+
+<div class="form-box">
+<form id="enrollForm">
+
+<input type="text" id="studentName"
+placeholder="Student Name" required>
+
+<input type="text" id="studentEmail"
+placeholder="Email Address" required>
+
+<input type="text" id="studentPhone"
+placeholder="Mobile Number" required>
+
+<textarea id="studentCourse" type="text"
+placeholder="Course Interested"></textarea>
+
+<button type="button" class="main-btn" onclick="enrollSubmit()" >
+Submit Enrollment
+</button>
+
+</form>
+</div>
+</section>
+
+<footer>
+<p>
+© 2026 RISING CLASSES | All Rights Reserved
+</p>
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div id="loginModal" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeLogin()">&times;</span>
+
+<h2>Login</h2>
+
+<input type="email" id="loginEmail"
+placeholder="Enter Email">
+
+<input type="password" id="loginPassword"
+placeholder="Enter Password">
+
+<button onclick="loginUser()" class="main-btn" type="button">
+Login
+</button>
+
+</div>
+</div>
+
+<!-- REGISTER MODAL -->
+
+<div id="registerModal" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeRegister()">&times;</span>
+
+<h2>Create Account</h2>
+
+<input type="text" id="registerName"
+placeholder="Full Name">
+
+<input type="email" id="registerEmail"
+placeholder="Email Address">
+
+<input type="password" id="registerPassword"
+placeholder="Password">
+
+<button onclick="registerUser()" class="main-btn" type="button">
+Register
+</button>
+
+</div>
+</div>
+
+<script src="js/load-teachers.js"></script>
+
+<script src="js/load-students.js"></script>
+
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
