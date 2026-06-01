@@ -48,4 +48,18 @@ ${student.description}
 
 }
 
+function scrollStudents(direction){
+
+    const container =
+    document.getElementById("studentContainer");
+
+    container.scrollBy({
+
+        left: direction * 320,
+        behavior: "smooth"
+
+    });
+
+}
+
 loadStudents();

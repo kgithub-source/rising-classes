@@ -32,7 +32,7 @@ ${teacher.subject}
 </p>
 
 <p>
-<strong>Experience:</strong>
+<strong>Education:</strong>
 ${teacher.experience}
 </p>
 
@@ -47,5 +47,20 @@ ${teacher.description}
 });
 
 }
+
+function scrollTeachers(direction){
+
+    const container =
+    document.getElementById("teacherContainer");
+
+    container.scrollBy({
+
+        left: direction * 320,
+        behavior: "smooth"
+
+    });
+
+}
+
 
 loadTeachers();

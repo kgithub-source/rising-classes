@@ -10,6 +10,8 @@ function openLogin(){
 document.getElementById("loginModal")
 .style.display="block";
 
+document.getElementById("loginModal").style.display="block";
+
 }
 
 function closeLogin(){
@@ -101,3 +103,224 @@ window.location.href = "index.html";
 
 
 }
+
+
+setInterval(() => {
+
+    const container =
+    document.getElementById("teacherContainer");
+
+    container.scrollBy({
+        left:300,
+        behavior:"smooth"
+    });
+
+},3000);
+
+
+const slides =
+document.querySelectorAll(".bg-slide");
+
+const dotsContainer =
+document.querySelector(".dots");
+
+let current = 0;
+let interval;
+
+slides.forEach((slide,index)=>{
+
+    const dot =
+    document.createElement("span");
+
+    dot.classList.add("dot");
+
+    if(index===0)
+        dot.classList.add("active");
+
+    dot.onclick=()=>{
+
+        showSlide(index);
+
+        restartSlider();
+
+    };
+
+    dotsContainer.appendChild(dot);
+
+});
+
+const dots =
+document.querySelectorAll(".dot");
+
+function showSlide(index){
+
+    slides.forEach(s=>
+        s.classList.remove("active")
+    );
+
+    dots.forEach(d=>
+        d.classList.remove("active")
+    );
+
+    slides[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+    current=index;
+
+}
+
+function nextSlide(){
+
+    current++;
+
+    if(current>=slides.length){
+
+        current=0;
+
+    }
+
+    showSlide(current);
+
+}
+
+function startSlider(){
+
+    interval=
+    setInterval(nextSlide,4000);
+
+}
+
+function stopSlider(){
+
+    clearInterval(interval);
+
+}
+
+function restartSlider(){
+
+    stopSlider();
+
+    startSlider();
+
+}
+
+document.querySelector(".hero")
+.addEventListener(
+"mouseenter",
+stopSlider
+);
+
+document.querySelector(".hero")
+.addEventListener(
+"mouseleave",
+startSlider
+);
+
+startSlider();
+
+
+
+// const slides =
+// document.querySelectorAll('.slide');
+
+// const dotsContainer =
+// document.querySelector('.dots');
+
+// let current = 0;
+
+// let interval;
+
+// // Create dots dynamically
+// slides.forEach((slide,index)=>{
+
+//     const dot =
+//     document.createElement('span');
+
+//     dot.classList.add('dot');
+
+//     if(index===0)
+//         dot.classList.add('active');
+
+//     dot.addEventListener('click',()=>{
+
+//         showSlide(index);
+
+//         restartAuto();
+
+//     });
+
+//     dotsContainer.appendChild(dot);
+
+// });
+
+// const dots =
+// document.querySelectorAll('.dot');
+
+// function showSlide(index){
+
+//     slides.forEach(slide=>
+//         slide.classList.remove('active')
+//     );
+
+//     dots.forEach(dot=>
+//         dot.classList.remove('active')
+//     );
+
+//     slides[index].classList.add('active');
+//     dots[index].classList.add('active');
+
+//     current=index;
+
+// }
+
+// function nextSlide(){
+
+//     current++;
+
+//     if(current>=slides.length){
+
+//         current=0;
+
+//     }
+
+//     showSlide(current);
+
+// }
+
+// function startAuto(){
+
+//     interval =
+//     setInterval(nextSlide,3000);
+
+// }
+
+// function stopAuto(){
+
+//     clearInterval(interval);
+
+// }
+
+// function restartAuto(){
+
+//     stopAuto();
+//     startAuto();
+
+// }
+
+// // Pause on hover
+
+// const slider =
+// document.querySelector('.slider-container');
+
+// slider.addEventListener(
+// 'mouseenter',
+// stopAuto
+// );
+
+// slider.addEventListener(
+// 'mouseleave',
+// startAuto
+// );
+
+// startAuto();

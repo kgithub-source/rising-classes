@@ -35,7 +35,7 @@ class="logo-image">
         src="images/logo.jpeg"
         alt="Rising Classes Logo"
         class="logo-image">
-        <h6>RISING CLASSES</h6>
+        <!-- <h6>RISING CLASSES</h6> -->
     </div>
     
 </div>
@@ -46,19 +46,22 @@ class="logo-image">
 <li><a href="#teachers">Teachers</a></li>
 <li><a href="#students">Top Students</a></li>
 <li><a href="#pricing">Pricing</a></li>
-<li><a href="#offers">Offers</a></li>
 <li><a href="#about">About</a></li>
 </ul>
 </nav>
 
 <div class="auth-buttons">
 <button onclick="openLogin()">Login</button>
-<button onclick="openRegister()">Register</button>
+<!-- <button onclick="openRegister()">Register</button> -->
 </div>
 
 </header>
 
-<section class="hero" id="home">
+<!-- <section class="hero" id="home">
+
+
+
+
 <div class="hero-content">
 <h1>RISING CLASSES</h1>
 <p>
@@ -67,13 +70,53 @@ Excellence in Education for aspiring minds in College Square, Aska
 <button class="main-btn" onclick="scrollToEnroll()">
 Enroll Now
 </button>
+
+
 </div>
+</section> -->
+
+
+<section class="hero" id="home">
+
+    <!-- Background Slider -->
+    <div class="hero-slider">
+
+        <img src="images\Achivement.jpeg" class="bg-slide active">
+        <img src="images\CenterPhoto1.jpeg" class="bg-slide">
+        <img src="images\logo.jpeg" class="bg-slide">
+
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+
+        <h1>RISING CLASSES</h1>
+
+        <p>
+            Excellence in Education for aspiring minds in College Square, Aska
+        </p>
+
+        <!-- <button class="enroll-btn">
+            Enroll Now
+        </button> -->
+
+        <button class="main-btn" onclick="scrollToEnroll()">Enroll Now</button>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="dots"></div>
+
 </section>
+
 
 <section id="achievements">
 <h2 class="section-title">Achievements</h2>
 
-<div class="card-container">
+<div class="card-container-price">
 
 <div class="card">
 <h3>500+</h3>
@@ -99,12 +142,21 @@ Enroll Now
 Our Teachers
 </h2>
 
+<div class="carousel-wrapper">
+
+    <button class="nav-btn prev" onclick="scrollTeachers(-1)">
+        &#10094;
+    </button>
 <div
 class="card-container"
 id="teacherContainer">
 
 </div>
+<button class="nav-btn next" onclick="scrollTeachers(1)">
+        &#10095;
+    </button>
 
+</div>
 </section>
 
 <section id="students">
@@ -113,9 +165,22 @@ id="teacherContainer">
 Top Students
 </h2>
 
+<div class="carousel-wrapper">
+
+    <button class="nav-btn"
+            onclick="scrollStudents(-1)">
+        &#10094;
+    </button>
 <div
 class="card-container"
 id="studentContainer">
+
+</div>
+
+<button class="nav-btn"
+            onclick="scrollStudents(1)">
+        &#10095;
+    </button>
 
 </div>
 
@@ -124,7 +189,7 @@ id="studentContainer">
 <section id="pricing">
 <h2 class="section-title">Pricing</h2>
 
-<div class="card-container">
+<div class="card-container-price">
 
 <div class="card">
 <h3>Class 1st-4th</h3>
@@ -201,7 +266,7 @@ Empowering
 
 <section id="about" class="about-section">
 
-    <h2 class="section-title">About RISING CLASSES</h2>
+    <h2 class="section-title">RISING CLASSES</h2>
 
     <p class="about-text">
         <strong>RISING CLASSES</strong> is committed to providing quality education and helping students achieve academic excellence. Located in <strong>College Square, Aska</strong>, our mission is to nurture young minds, build confidence, and create a strong foundation for a successful future.
@@ -213,7 +278,9 @@ Empowering
 
     <div class="highlights">
 
-        <h3>Why Choose RISING CLASSES?</h3>
+    <h3>Why Choose RISING CLASSES?</h3>
+
+    <div class="highlight-grid">
 
         <ul>
             <li>✔ Experienced and Dedicated Teachers</li>
@@ -224,16 +291,22 @@ Empowering
             <li>✔ Special Board Examination Preparation</li>
             <li>✔ English Speaking and Grammar Development</li>
             <li>✔ Daily Homework Monitoring and Evaluation</li>
+        </ul>
+
+        <ul>
             <li>✔ Strong Parent-Teacher Communication</li>
             <li>✔ Disciplined and Student-Friendly Environment</li>
             <li>✔ Comprehensive Notes and Study Materials</li>
             <li>✔ Affordable and Value-Oriented Fee Structure</li>
             <li>✔ Individual Attention for Weak Students</li>
-            <li>✔ Timely Syllabus Completion with Multiple Revisions</li>
-            <li>✔ Motivation, Career Guidance, and Personality Development</li>
+            <li>✔ Timely Syllabus Completion with Revisions</li>
+            <li>✔ Career Guidance and Personality Development</li>
+            <li>✔ Motivational Support for Academic Success</li>
         </ul>
 
     </div>
+
+</div>
 
     <div class="vision-box">
         <h3>Our Vision</h3>
