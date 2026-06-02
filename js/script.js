@@ -7,8 +7,7 @@ document.getElementById("enroll")
 
 function openLogin(){
 
-document.getElementById("loginModal")
-.style.display="block";
+document.getElementById("loginModal").style.display="block";
 
 document.getElementById("loginModal").style.display="block";
 
@@ -105,24 +104,22 @@ window.location.href = "index.html";
 }
 
 
-setInterval(() => {
+// setInterval(() => {
 
-    const container =
-    document.getElementById("teacherContainer");
+//     const container =
+//     document.getElementById("teacherContainer");
 
-    container.scrollBy({
-        left:300,
-        behavior:"smooth"
-    });
+//     container.scrollBy({
+//         left:300,
+//         behavior:"smooth"
+//     });
 
-},3000);
+// },3000);
 
 
-const slides =
-document.querySelectorAll(".bg-slide");
+const slides = document.querySelectorAll(".bg-slide");
 
-const dotsContainer =
-document.querySelector(".dots");
+const dotsContainer = document.querySelector(".dots");
 
 let current = 0;
 let interval;
@@ -149,8 +146,7 @@ slides.forEach((slide,index)=>{
 
 });
 
-const dots =
-document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
 
@@ -186,8 +182,7 @@ function nextSlide(){
 
 function startSlider(){
 
-    interval=
-    setInterval(nextSlide,4000);
+    interval=setInterval(nextSlide,4000);
 
 }
 
@@ -205,122 +200,9 @@ function restartSlider(){
 
 }
 
-document.querySelector(".hero")
-.addEventListener(
-"mouseenter",
-stopSlider
-);
+document.querySelector(".hero").addEventListener("mouseenter",stopSlider);
 
-document.querySelector(".hero")
-.addEventListener(
-"mouseleave",
-startSlider
-);
+document.querySelector(".hero").addEventListener("mouseleave",startSlider);
 
 startSlider();
 
-
-
-// const slides =
-// document.querySelectorAll('.slide');
-
-// const dotsContainer =
-// document.querySelector('.dots');
-
-// let current = 0;
-
-// let interval;
-
-// // Create dots dynamically
-// slides.forEach((slide,index)=>{
-
-//     const dot =
-//     document.createElement('span');
-
-//     dot.classList.add('dot');
-
-//     if(index===0)
-//         dot.classList.add('active');
-
-//     dot.addEventListener('click',()=>{
-
-//         showSlide(index);
-
-//         restartAuto();
-
-//     });
-
-//     dotsContainer.appendChild(dot);
-
-// });
-
-// const dots =
-// document.querySelectorAll('.dot');
-
-// function showSlide(index){
-
-//     slides.forEach(slide=>
-//         slide.classList.remove('active')
-//     );
-
-//     dots.forEach(dot=>
-//         dot.classList.remove('active')
-//     );
-
-//     slides[index].classList.add('active');
-//     dots[index].classList.add('active');
-
-//     current=index;
-
-// }
-
-// function nextSlide(){
-
-//     current++;
-
-//     if(current>=slides.length){
-
-//         current=0;
-
-//     }
-
-//     showSlide(current);
-
-// }
-
-// function startAuto(){
-
-//     interval =
-//     setInterval(nextSlide,3000);
-
-// }
-
-// function stopAuto(){
-
-//     clearInterval(interval);
-
-// }
-
-// function restartAuto(){
-
-//     stopAuto();
-//     startAuto();
-
-// }
-
-// // Pause on hover
-
-// const slider =
-// document.querySelector('.slider-container');
-
-// slider.addEventListener(
-// 'mouseenter',
-// stopAuto
-// );
-
-// slider.addEventListener(
-// 'mouseleave',
-// startAuto
-// );
-
-// startAuto();

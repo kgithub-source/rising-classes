@@ -16,13 +16,13 @@ container.innerHTML = "";
 
 students.forEach(student=>{
 
+    // <img
+// src="images/students/${student.image}"
+// alt="${student.name}">
+
 container.innerHTML += `
 
 <div class="card">
-
-<img
-src="images/students/${student.image}"
-alt="${student.name}">
 
 <h3>${student.name}</h3>
 
@@ -61,5 +61,6 @@ function scrollStudents(direction){
     });
 
 }
+
 
 loadStudents();

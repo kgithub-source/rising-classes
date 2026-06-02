@@ -9,8 +9,7 @@ await fetch(API_URL + "?action=teachers");
 const teachers =
 await response.json();
 
-const container =
-document.getElementById("teacherContainer");
+const container = document.getElementById("teacherContainer");
 
 container.innerHTML = "";
 
@@ -20,25 +19,14 @@ container.innerHTML += `
 
 <div class="card">
 
-<img
-src="images/teachers/${teacher.image}"
-alt="${teacher.name}">
-
+<img  src="images/teachers/${teacher.image}" alt="${teacher.name}">
 <h3>${teacher.name}</h3>
 
-<p>
-<strong>Subject:</strong>
-${teacher.subject}
-</p>
+<p> <strong>Specialist:</strong>${teacher.subject}</p>
 
-<p>
-<strong>Education:</strong>
-${teacher.experience}
-</p>
+<p><strong>Education:</strong>${teacher.experience}</p>
 
-<p>
-${teacher.description}
-</p>
+<p>${teacher.description}</p>
 
 </div>
 
@@ -47,6 +35,7 @@ ${teacher.description}
 });
 
 }
+
 
 function scrollTeachers(direction){
 
@@ -61,6 +50,5 @@ function scrollTeachers(direction){
     });
 
 }
-
 
 loadTeachers();

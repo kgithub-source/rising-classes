@@ -57,25 +57,6 @@ class="logo-image">
 
 </header>
 
-<!-- <section class="hero" id="home">
-
-
-
-
-<div class="hero-content">
-<h1>RISING CLASSES</h1>
-<p>
-Excellence in Education for aspiring minds in College Square, Aska
-</p>
-<button class="main-btn" onclick="scrollToEnroll()">
-Enroll Now
-</button>
-
-
-</div>
-</section> -->
-
-
 <section class="hero" id="home">
     <!-- Background Slider -->
     <div class="hero-slider">
@@ -127,53 +108,27 @@ Enroll Now
 </section>
 
 <section id="teachers">
-
-<h2 class="section-title">
-Our Teachers
-</h2>
-
+<h2 class="section-title">Our Teachers</h2>
+<!-- prev  next class="nav-btn" class="nav-btn"-->
 <div class="carousel-wrapper">
-
-    <button class="nav-btn prev" onclick="scrollTeachers(-1)">
-        &#10094;
-    </button>
-<div
-class="card-container"
-id="teacherContainer">
-
-</div>
-<button class="nav-btn next" onclick="scrollTeachers(1)">
-        &#10095;
-    </button>
-
+    <button class="nav-btn" type="button" onclick="scrollTeachers(-1)">&#10094;</button>
+    <div class="card-container" id="teacherContainer"></div>
+    <button class="nav-btn" type="button" onclick="scrollTeachers(1)">&#10095;</button>
 </div>
 </section>
 
+
+
+
+
 <section id="students">
-
-<h2 class="section-title">
-Top Students
-</h2>
-
+<h2 class="section-title">Top Students</h2>
 <div class="carousel-wrapper">
-
-    <button class="nav-btn"
-            onclick="scrollStudents(-1)">
-        &#10094;
-    </button>
-<div
-class="card-container"
-id="studentContainer">
-
+    <button class="nav-btn" type="button" onclick="scrollStudents(-1)">&#10094;</button>
+    <div class="card-container" id="studentContainer"> </div>
+    <!-- class="nav-btn"  onclick="scrollStudents(1)" onclick="scrollStudents(-1)"-->
+    <button  class="nav-btn" type="button" onclick="scrollStudents(1)">&#10095;</button>
 </div>
-
-<button class="nav-btn"
-            onclick="scrollStudents(1)">
-        &#10095;
-    </button>
-
-</div>
-
 </section>
 
 <section id="pricing">
@@ -310,7 +265,7 @@ Empowering
 
 
 
-<section id="enroll">
+<!-- <section id="enroll">
 <h2 class="section-title">Student Enrollment</h2>
 
 <div class="form-box">
@@ -334,7 +289,70 @@ Submit Enrollment
 
 </form>
 </div>
+</section> -->
+
+
+<section class="enroll-contact-section" id="enroll">
+
+    <!-- Enrollment Card -->
+    <div class="card enroll-card">
+
+        <h2>Student Enrollment</h2>
+
+        <form id="enrollForm">
+
+            <input type="text" id="studentName"
+            placeholder="Student Name" required>
+
+            <input type="text" id="studentEmail"
+            placeholder="Email Address" required>
+
+            <input type="text" id="studentPhone"
+            placeholder="Mobile Number" required>
+
+            <input id="studentCourse" type="text"
+            placeholder="Course Interested"></input>
+
+            <button type="button" class="main-btn" onclick="enrollSubmit()" >
+            Submit Enrollment
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Contact Card -->
+    <div class="card contact-card">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+
+            <p>
+                📍 College Square, Aska,
+                Odisha - 761110
+            </p>
+
+            <p>
+                📞 +91 9876543210
+            </p>
+
+            <p>
+                📧 info@risingclasses.in
+            </p>
+
+            <p>
+                🕒 Mon - Sat
+                7:00 AM - 8:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
+
 
 <footer>
 <p>
