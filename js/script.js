@@ -94,14 +94,7 @@ alert(result.message);
 
 }
 
-window.logout = async function(){
 
-alert("Visit again. Thank you");
-window.location.href = "index.html";
-
-
-
-}
 
 
 // setInterval(() => {

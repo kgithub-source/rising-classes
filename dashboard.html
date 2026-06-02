@@ -4,6 +4,21 @@
 <title>Student Dashboard</title>
 <link rel="stylesheet" href="css/dashboard.css">
 <link rel="stylesheet" href="css/style.css">
+<script>
+
+const adminEmail =
+sessionStorage.getItem(
+    "adminEmail"
+);
+
+if(!adminEmail){
+
+    window.location.href =
+    "index.html";
+
+}
+
+</script>
 </head>
 <body>
 <header>
@@ -51,9 +66,40 @@
 </div>
 
 </div>
+
+<section id="adminDashboard">
+
+    <h2>Enrolled Students</h2>
+
+    <table id="studentTable">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Class</th>
+                <th>Date</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+</section>
+
 </div>
 <script src="js/auth.js"></script>
 <script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 
 </html>
