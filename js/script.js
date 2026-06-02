@@ -9,7 +9,7 @@ function openLogin(){
 
 document.getElementById("loginModal").style.display="block";
 
-document.getElementById("loginModal").style.display="block";
+//document.getElementById("loginModal").style.display="block";
 
 }
 
