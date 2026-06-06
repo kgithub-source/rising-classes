@@ -1,8 +1,11 @@
+var API_URL_STUDENTS = "https://script.google.com/macros/s/AKfycbzpdmJuV9YbV_vQoechiWdYelMzSMQLxABhvn2gB1DLy539TvT_Ysng3a3BCEAzX2ZduQ/exec"
+
+
 
 async function loadStudents(){
 
 const response =
-await fetch(API_URL + "?action=students");
+await fetch(API_URL_STUDENTS + "?action=students");
 
 const students =
 await response.json();
