@@ -58,43 +58,39 @@ closeRegister();
 }
 
 window.enrollSubmit = async function(){
+    let studentName =  document.getElementById("studentName").value;
+    let studentEmail = document.getElementById("studentEmail").value;
+    let studentPhone = document.getElementById("studentPhone").value;
+    let studentCourse = document.getElementById("studentCourse").value;
 
-let studentName =  document.getElementById("studentName").value;
-let studentEmail = document.getElementById("studentEmail").value;
-let studentPhone = document.getElementById("studentPhone").value;
-let studentCourse = document.getElementById("studentCourse").value;
+    const response = await fetch(API_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            action : "enroll",
+            studentName: studentName,
+            studentEmail: studentEmail,
+            studentPhone: studentPhone,
+            studentCourse:studentCourse,
+        })
 
-const response = await fetch(API_URL, {
+    });
+    const result = await response.json();
 
-method: "POST",
-body: JSON.stringify({
-action : "enroll",
-studentName: studentName,
-studentEmail: studentEmail,
-studentPhone: studentPhone,
-studentCourse:studentCourse,
+    if(result.status == "success"){
 
+        document.getElementById("studentName").value = "";
+        document.getElementById("studentEmail").value = "";
+        document.getElementById("studentPhone").value = "";
+        document.getElementById("studentCourse").value = "";
+        window.location.href = "#home";
+        alert("Enrolled Successful!");
+        closeRegister();
 
-})
+    }else{
 
-});
-const result = await response.json();
+        alert(result.message);
 
-if(result.status == "success"){
-
-document.getElementById("studentName").value = "";
-document.getElementById("studentEmail").value = "";
-document.getElementById("studentPhone").value = "";
-document.getElementById("studentCourse").value = "";
-window.location.href = "#home";
-alert("Enrolled Successful!");
-closeRegister();
-
-}else{
-
-alert(result.message);
-
-}
+    }
 
 }
 
