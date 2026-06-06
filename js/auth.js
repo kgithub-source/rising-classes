@@ -6,7 +6,10 @@
 // var API_URL = "https://script.google.com/macros/s/AKfycbzZBP4hcRNr9ZIT56H9j-V8uPoDRBj9Cx_SiJDN67UksGmPHk_leAWFFml3KapOeQE8Xw/exec"
 
 
-var API_URL = "https://script.google.com/macros/s/AKfycbwIKVkTtUMn4nO0DT7XjPNv_y3keDKQG0HjXmszHj3IlePWjm6sstBXvmd9uVzkadmTMA/exec"
+var API_URL = "https://script.google.com/macros/s/AKfycbzpdmJuV9YbV_vQoechiWdYelMzSMQLxABhvn2gB1DLy539TvT_Ysng3a3BCEAzX2ZduQ/exec"
+
+
+
 window.registerUser = async function(){
 
 const name =

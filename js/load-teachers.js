@@ -1,5 +1,3 @@
-var API_URL =
-"https://script.google.com/macros/s/AKfycbxBJ9N4qzHqRHTbmPQs9cJBphkvDMRxOjXCMSmjMMm0XYX44Pr-0y6vpXIgrWuDks9VGg/exec";
 
 async function loadTeachers(){
 
