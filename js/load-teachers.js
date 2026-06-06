@@ -1,5 +1,5 @@
-var API_URL_TEACHER = "https://script.google.com/macros/s/AKfycbzpdmJuV9YbV_vQoechiWdYelMzSMQLxABhvn2gB1DLy539TvT_Ysng3a3BCEAzX2ZduQ/exec";
-
+// var API_URL_TEACHER = "https://script.google.com/macros/s/AKfycbzpdmJuV9YbV_vQoechiWdYelMzSMQLxABhvn2gB1DLy539TvT_Ysng3a3BCEAzX2ZduQ/exec";
+var API_URL_TEACHER = "https://script.google.com/macros/s/AKfycbzhs794y2DjQ5IpSjo5l8iCvgEvGD1yplkURvSN0LcT-V8THFS0r2Nz__hCndXzWSelPw/exec";
 async function loadTeachers(){
 
 const response =
