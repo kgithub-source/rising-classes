@@ -50,19 +50,111 @@ ${student.description}
 
 }
 
+
+
 function scrollStudents(direction){
+
+    const container =
+    document.getElementById(
+        "studentContainer"
+    );
+
+    if(window.innerWidth <= 768){
+
+        if(direction > 0){
+
+            const first =
+            container.firstElementChild;
+
+            container.appendChild(first);
+
+        }
+        else{
+
+            const cards =
+            container.children;
+
+            container.insertBefore(
+                cards[cards.length-1],
+                cards[0]
+            );
+
+        }
+
+    }
+    else{
+
+        container.scrollBy({
+
+            left: direction * 320,
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+}
+loadStudents();
+
+
+
+
+
+function enableStudentSwipe(){
 
     const container =
     document.getElementById("studentContainer");
 
-    container.scrollBy({
+    let startX = 0;
 
-        left: direction * 320,
-        behavior: "smooth"
+    container.addEventListener(
+        "touchstart",
+        (e)=>{
 
-    });
+            startX =
+            e.touches[0].clientX;
+
+        },
+        {passive:true}
+    );
+
+    container.addEventListener(
+        "touchend",
+        (e)=>{
+
+            const endX =
+            e.changedTouches[0].clientX;
+
+            const diff =
+            startX - endX;
+
+            if(Math.abs(diff) < 50)
+                return;
+
+            if(diff > 0){
+
+                const first =
+                container.firstElementChild;
+
+                container.appendChild(first);
+
+            }
+            else{
+
+                const cards =
+                container.children;
+
+                container.insertBefore(
+                    cards[cards.length - 1],
+                    cards[0]
+                );
+
+            }
+
+        }
+    );
 
 }
 
-
-loadStudents();
+enableStudentSwipe()

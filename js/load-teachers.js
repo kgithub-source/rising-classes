@@ -39,15 +39,164 @@ container.innerHTML += `
 function scrollTeachers(direction){
 
     const container =
-    document.getElementById("teacherContainer");
+    document.getElementById(
+        "teacherContainer"
+    );
 
-    container.scrollBy({
+    if(window.innerWidth <= 768){
 
-        left: direction * 320,
-        behavior: "smooth"
+        if(direction > 0){
 
-    });
+            const first =
+            container.firstElementChild;
+
+            container.appendChild(first);
+
+        }
+        else{
+
+            const cards =
+            container.children;
+
+            container.insertBefore(
+                cards[cards.length-1],
+                cards[0]
+            );
+
+        }
+
+    }
+    else{
+
+        container.scrollBy({
+
+            left: direction * 320,
+
+            behavior:"smooth"
+
+        });
+
+    }
 
 }
 
 loadTeachers();
+
+
+
+// function enableSwipe(containerId){
+
+//     const slider =
+//     document.getElementById(containerId);
+
+//     let isDown = false;
+//     let startX;
+//     let scrollLeft;
+
+//     slider.addEventListener("mousedown",(e)=>{
+
+//         isDown = true;
+
+//         startX =
+//         e.pageX - slider.offsetLeft;
+
+//         scrollLeft =
+//         slider.scrollLeft;
+
+//     });
+
+//     slider.addEventListener("mouseleave",()=>{
+
+//         isDown = false;
+
+//     });
+
+//     slider.addEventListener("mouseup",()=>{
+
+//         isDown = false;
+
+//     });
+
+//     slider.addEventListener("mousemove",(e)=>{
+
+//         if(!isDown) return;
+
+//         e.preventDefault();
+
+//         const x =
+//         e.pageX - slider.offsetLeft;
+
+//         const walk =
+//         (x - startX) * 2;
+
+//         slider.scrollLeft =
+//         scrollLeft - walk;
+
+//     });
+
+// }
+
+
+
+
+// enableSwipe("teacherContainer")
+
+
+
+function enableTeacherSwipe(){
+
+    const container =
+    document.getElementById("teacherContainer");
+
+    let startX = 0;
+
+    container.addEventListener(
+        "touchstart",
+        (e)=>{
+
+            startX =
+            e.touches[0].clientX;
+
+        },
+        {passive:true}
+    );
+
+    container.addEventListener(
+        "touchend",
+        (e)=>{
+
+            const endX =
+            e.changedTouches[0].clientX;
+
+            const diff =
+            startX - endX;
+
+            if(Math.abs(diff) < 50)
+                return;
+
+            if(diff > 0){
+
+                const first =
+                container.firstElementChild;
+
+                container.appendChild(first);
+
+            }
+            else{
+
+                const cards =
+                container.children;
+
+                container.insertBefore(
+                    cards[cards.length - 1],
+                    cards[0]
+                );
+
+            }
+
+        }
+    );
+
+}
+
+enableTeacherSwipe()

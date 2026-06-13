@@ -95,7 +95,30 @@ window.enrollSubmit = async function(){
 }
 
 
+function toggleMenu(){
 
+    document
+    .getElementById("navbar")
+    .classList
+    .toggle("active");
+
+}
+
+
+document
+.querySelectorAll("nav a")
+.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document
+        .getElementById("navbar")
+        .classList
+        .remove("active");
+
+    });
+
+});
 
 // setInterval(() => {
 

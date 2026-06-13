@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 <title>RISING CLASSES</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,7 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 </head>
 <body>
 
@@ -26,7 +28,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <!-- <h6>RISING CLASSES</h6> -->
     </div>
 </div>
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+<nav id="navbar">
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#achievements">Achievements</a></li>
@@ -98,9 +104,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <h2 class="section-title">Our Teachers</h2>
 <!-- prev  next class="nav-btn" class="nav-btn"-->
 <div class="carousel-wrapper">
-    <button class="nav-btn" type="button" onclick="scrollTeachers(-1)">&#10094;</button>
+    <button class="nav-btn left" type="button" onclick="scrollTeachers(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+        <!-- &#10094; -->
+    </button>
     <div class="card-container" id="teacherContainer"></div>
-    <button class="nav-btn" type="button" onclick="scrollTeachers(1)">&#10095;</button>
+    <button class="nav-btn right" type="button" onclick="scrollTeachers(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+        <!-- &#10095; -->
+    </button>
 </div>
 </section>
 
@@ -111,10 +123,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <section id="students">
 <h2 class="section-title">Top Students</h2>
 <div class="carousel-wrapper">
-    <button class="nav-btn" type="button" onclick="scrollStudents(-1)">&#10094;</button>
+    <button class="nav-btn left" type="button" onclick="scrollStudents(-1)"><i class="fa-solid fa-chevron-left"></i></button>
     <div class="card-container" id="studentContainer"> </div>
-    <!-- class="nav-btn"  onclick="scrollStudents(1)" onclick="scrollStudents(-1)"-->
-    <button  class="nav-btn" type="button" onclick="scrollStudents(1)">&#10095;</button>
+    <button  class="nav-btn right" type="button" onclick="scrollStudents(1)"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
 </section>
 
