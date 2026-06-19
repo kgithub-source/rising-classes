@@ -24,8 +24,9 @@ students.forEach(student=>{
 
 container.innerHTML += `
 
-<div class="card">
+<div class="card-students">
 
+<div class='info-student'>
 <h3>${student.name}</h3>
 
 <p>
@@ -41,7 +42,7 @@ ${student.rank}
 <p>
 ${student.description}
 </p>
-
+</div>
 </div>
 
 `;

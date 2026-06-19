@@ -28,9 +28,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <!-- <h6>RISING CLASSES</h6> -->
     </div>
 </div>
-<div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+
 
 <nav id="navbar">
 <ul>
@@ -43,10 +41,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </ul>
 </nav>
 
+<div class="side-nav">
 <div class="auth-buttons">
 <button onclick="openLogin()" type="button">Login</button>
 <!-- <button onclick="openRegister()">Register</button> -->
 </div>
+<div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+</div>
+</div>
+
+
+
 
 </header>
 
@@ -80,19 +86,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <section id="achievements">
 <h2 class="section-title">Achievements</h2>
 
-<div class="card-container-price">
+<div class="card-container-achivement">
 
-<div class="card">
+<div class="card-achivement">
 <h3>500+</h3>
 <p>Successful Students</p>
 </div>
 
-<div class="card">
+<div class="card-achivement">
 <h3>98%</h3>
 <p>Success Rate</p>
 </div>
 
-<div class="card">
+<div class="card-achivement">
 <h3>50+</h3>
 <p>State Rank Holders</p>
 </div>
@@ -103,12 +109,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <section id="teachers">
 <h2 class="section-title">Our Teachers</h2>
 <!-- prev  next class="nav-btn" class="nav-btn"-->
-<div class="carousel-wrapper">
+<div class="carousel-wrapper-teacher">
     <button class="nav-btn left" type="button" onclick="scrollTeachers(-1)">
         <i class="fa-solid fa-chevron-left"></i>
         <!-- &#10094; -->
     </button>
-    <div class="card-container" id="teacherContainer"></div>
+    <div class="teachers-list" id="teacherContainer"></div>
     <button class="nav-btn right" type="button" onclick="scrollTeachers(1)">
         <i class="fa-solid fa-chevron-right"></i>
         <!-- &#10095; -->
@@ -122,9 +128,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <section id="students">
 <h2 class="section-title">Top Students</h2>
-<div class="carousel-wrapper">
+<div class="carousel-wrapper-students">
     <button class="nav-btn left" type="button" onclick="scrollStudents(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-    <div class="card-container" id="studentContainer"> </div>
+    <div class="students-list" id="studentContainer"> </div>
     <button  class="nav-btn right" type="button" onclick="scrollStudents(1)"><i class="fa-solid fa-chevron-right"></i></button>
 </div>
 </section>

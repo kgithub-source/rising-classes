@@ -16,9 +16,10 @@ teachers.forEach(teacher=>{
 
 container.innerHTML += `
 
-<div class="card">
+<div class="card-teacher">
 
 <img  src="images/teachers/${teacher.image}" alt="${teacher.name}">
+<div class='teacher-info'>
 <h3>${teacher.name}</h3>
 
 <p> <strong>Specialist:</strong>${teacher.subject}</p>
@@ -26,6 +27,7 @@ container.innerHTML += `
 <p><strong>Education:</strong>${teacher.experience}</p>
 
 <p>${teacher.description}</p>
+</div>
 
 </div>
 
